@@ -1,6 +1,7 @@
 CREATE TABLE usuario(
 	id serial PRIMARY KEY,
-	usermame varchar(50) not null,
+	username varchar(50) not null,
+	email varchar(70) not null,
 	senha char(32) not null
 );
 
@@ -36,9 +37,9 @@ CREATE TABLE rotina(
 	id serial PRIMARY KEY,
 	id_kit integer not null,
 	data_producao date not null,
-	setor integer not null,
+	id_setor integer not null,
 
-	CONSTRAINT fk_kit FOREIGN KEY (id_setor) REFERENCES kit(id),
+	CONSTRAINT fk_kit FOREIGN KEY (id_kit) REFERENCES kit(id),
 	CONSTRAINT fk_setorRotina FOREIGN KEY (id_setor) REFERENCES setor(id)
 );
 

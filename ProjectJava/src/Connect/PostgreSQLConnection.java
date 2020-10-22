@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class PostgreSQLConnection {
     
-    public static PostgreSQLConnection instance;
+    private static PostgreSQLConnection instance;
     
     private String driver   = "org.postgresql.Driver";
     private String user     = "postgres";
